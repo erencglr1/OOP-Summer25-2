@@ -1,8 +1,26 @@
+class Animal:
+    def __init__(self, name, group, legs, skills):
+        self.name = name
+        self.group = group
+        self.legs = legs
+        self.skills = skills
+
 animals = [
-    {"name": "Doggy", "group": "Mammals", "number_of_legs": 4, "skills": ["Running", "Swimming", "Barking"]},
-    {"name": "Parrot", "group": "Birds", "number_of_legs": 2, "skills": ["Flying", "Singing"]},
-    {"name": "Elephant", "group": "Mammals", "number_of_legs": 4, "skills": ["Trunk usage", "Swimming", "Heavy lifting"]},
-    {"name": "Cow", "group": "Mammals", "number_of_legs": 4, "skills": ["Grazing", "Milk production"]},
-    {"name": "Snake", "group": "Reptiles", "number_of_legs": 0, "skills": ["Slithering", "Hunting"]}
+    Animal("Doggy", "Mammals", 4, ["Running", "Swimming", "Barking"]),
+    Animal("Parrot", "Birds", 2, ["Flying", "Singing"]),
+    Animal("Elephant", "Mammals", 4, ["Trunk usage", "Swimming", "Heavy lifting"]),
+    Animal("Cow", "Mammals", 4, ["Grazing", "Milk production"]),
+    Animal("Snake", "Reptiles", 0, ["Slithering", "Hunting"])
 ]
-print(animals)
+
+for a in animals:
+    print(a.name, "-", a.group, "-", a.legs, "legs", "- Skills:", ", ".join(a.skills))
+
+
+
+
+
+
+
+
+
